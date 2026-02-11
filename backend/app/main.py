@@ -1,10 +1,24 @@
-#Import FastAPI
 from fastapi import FastAPI
 
-#Create a FastAPI instance. It will be the main point of interaction to create all the API
 app = FastAPI()
-
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "¡Bienvenido a Acali!"}
+
+@app.post("/registro_cliente")
+async def registro_cliente():
+    pass
+
+@app.put("/actualizar_cliente")
+async def actualizar_cliente():
+    pass
+
+@app.get("/clientes")
+async def mostrar_clientes():
+    pass
+
+@app.get("/clientes/{id_cliente}")
+async def mostrar_cliente(id_cliente: int):
+    pass
+
